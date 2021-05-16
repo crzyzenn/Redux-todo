@@ -3,18 +3,27 @@
 body,
 html {
   font-family: "Lato", sans-serif;
-}
-
-.App {
-  font-family: sans-serif;
-  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  background: teal;
+  color: white;
 }
 
 input {
-  padding: 10px 10px 10px 10px;
+  padding: 15px 200px 15px 20px;
   transition: all 0.4s ease-in;
   display: block;
   margin-bottom: 10px;
+  font-size: 1em;
+  background: teal;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+input::placeholder {
+  color: #ddd;
 }
 
 button {
@@ -22,12 +31,23 @@ button {
   background-color: black;
   color: white;
   transition: all 0.2s ease-in;
-  border: 0;
+  border: 3px solid teal;
   margin-right: 5px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
 button:hover {
-  background: goldenrod;
+  background: white;
+  color: black;
+}
+
+.todo--add--container {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .todo--items--container {
@@ -37,15 +57,14 @@ button:hover {
 
 .todo--item {
   padding: 10px;
-  background: #eee;
-  margin-bottom: 20px;
+  background: black;
   width: fit-content;
-  margin-right: 5px;
+  margin: 5px 5px;
+  border-radius: 10px;
 }
 
 .todo--item button {
   padding: 5px 10px;
-  border-radius: 10px;
 }
 
 .todo--item svg {
@@ -53,18 +72,17 @@ button:hover {
 }
 
 .todo--item--status {
-  padding: 10px 20px;
   border-radius: 10px;
-  font-size: 10px;
+  font-size: 12px;
   width: fit-content;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
 }
 
 .todo--item--status.done {
-  background: green;
-  color: white;
+  color: rgb(1, 189, 1);
 }
 
 .todo--item--status.not-done {
-  background: blue;
-  color: white;
+  color: teal;
 }
